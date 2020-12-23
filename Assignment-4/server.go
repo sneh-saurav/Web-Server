@@ -11,7 +11,7 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir("./static")))
 	http.HandleFunc("/form", formHandler)
 
-	http.HandleFunc("/check", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/check", func(w http.ResponseWriter, r *http.Request) {    //Checking
 		fmt.Fprintf(w, "CHECKING")
 	})
 
